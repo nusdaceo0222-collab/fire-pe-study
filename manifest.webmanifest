@@ -1,12 +1,13 @@
 {
-  "name": "소방기술사 학습",
+  "name": "필휴 소방기술사 목차",
   "short_name": "소방기술사",
-  "description": "소방기술사 전체 목차와 우선순위·기출문제",
+  "description": "필휴 소방기술사 상·하권 전체 목차 650개 검색·접기·펼치기",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f5f6f8",
   "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "icon-192.png",

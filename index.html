@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>필휴 소방기술사 우선순위 목차</title>
 <meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
 :root{--bg:#f5f6f8;--card:#fff;--text:#1f2328;--muted:#667085;--line:#e6e8ec;--accent:#2563eb;}
 *{box-sizing:border-box}
@@ -142,5 +144,16 @@ document.querySelectorAll('.filter').forEach(btn=>btn.onclick=()=>{
 });
 render();
 </script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => console.log('Service Worker 등록 성공:', reg.scope))
+      .catch(err => console.error('Service Worker 등록 실패:', err));
+  });
+}
+</script>
+
 </body>
 </html>

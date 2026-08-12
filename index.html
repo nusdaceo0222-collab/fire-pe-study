@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>필휴 소방기술사 우선순위 목차</title>
 <meta name="theme-color" content="#2563eb">
-<link rel="manifest" href="./manifest.webmanifest">
-<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
 :root{--bg:#f5f6f8;--card:#fff;--text:#1f2328;--muted:#667085;--line:#e6e8ec;--accent:#2563eb;}
 *{box-sizing:border-box}
@@ -40,6 +38,15 @@ mark{background:#fff1a8;padding:0 2px;border-radius:3px}
 .legend{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin:0 0 10px;font-size:13px;line-height:1.55}
 @media(max-width:480px){main{padding:7px} h1{font-size:18px} .part>summary{font-size:16px} .item{grid-template-columns:32px 1fr 36px;padding:9px 8px;font-size:14px}}
 </style>
+
+<link rel="manifest" href="./manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
 </head>
 <body>
 <header>
@@ -147,10 +154,14 @@ render();
 
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('Service Worker 등록 성공:', reg.scope))
-      .catch(err => console.error('Service Worker 등록 실패:', err));
+  window.addEventListener('load', async () => {
+    try {
+      const reg = await navigator.serviceWorker.register('./sw.js', { scope: './' });
+      await navigator.serviceWorker.ready;
+      console.log('PWA service worker ready:', reg.scope);
+    } catch (err) {
+      console.error('PWA service worker registration failed:', err);
+    }
   });
 }
 </script>

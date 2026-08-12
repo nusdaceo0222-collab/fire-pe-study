@@ -1,0 +1,34 @@
+{
+  "id": "/fire-pe-study/",
+  "name": "소방기술사 학습",
+  "short_name": "소방기술사",
+  "description": "소방기술사 우선순위 목차와 기출문제 학습",
+  "start_url": "/fire-pe-study/index.html",
+  "scope": "/fire-pe-study/",
+  "display": "standalone",
+  "display_override": [
+    "standalone"
+  ],
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/fire-pe-study/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fire-pe-study/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/fire-pe-study/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,34 +1,22 @@
 {
-  "id": "/fire-pe-study/",
-  "name": "소방기술사 학습",
-  "short_name": "소방기술사",
-  "description": "소방기술사 우선순위 목차와 기출문제 학습",
-  "start_url": "/fire-pe-study/index.html",
-  "scope": "/fire-pe-study/",
+  "name": "기술사 암기카드",
+  "short_name": "암기카드",
+  "description": "소방기술사 암기 이미지를 검색하고 반복 복습하는 PWA",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "display_override": [
-    "standalone"
-  ],
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0b3d91",
   "icons": [
     {
-      "src": "/fire-pe-study/icon-192.png",
+      "src": "assets/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/png"
     },
     {
-      "src": "/fire-pe-study/icon-512.png",
+      "src": "assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/fire-pe-study/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ]
 }
